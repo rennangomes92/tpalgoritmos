@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Exercício 05</title>
+</head>
+<body>
+    <h1>Exercício 5</h1>
+    <p>
+        Somar dois números: <br>
+        <input type="number" id="a"> +
+        <input type="number" id="b">
+        <input type="submit" onclick="calc()">
+    </p>
+    <p>
+        Raíz quadrada de um número: <br>
+        <input type="number" id="rq">
+        <input type="submit" onclick="calc()">
+    </p>
+    <p id="resposta"></p>
+</body>
+</html>
+<script>
+    function calc() {
+        var a = Number(document.all['a'].value);
+        var b = Number(document.all['b'].value);
+        var r = Number(document.all['resposta']);
+        r = a + b;
+        resposta.innerHTML = "A soma de dois números é: " + r   ;
+        var rq = Number(document.all['rq'].value);
+        var r1 = Number(document.all['r1']);
+        r1 = rq * rq;
+        resposta.innerHTML += " O quadrado de um número é: " + r1;
+
+        
+        
+
+    }
+</script>
+<style>
+
+        #folha{
+            text-align:center;
+            background-color:white;
+            margin-left:20%;
+            margin-right:20%;
+            padding:10px;        
+        }
+    
+        body{
+            background-color:rgb(6, 83, 83);
+        }
+    
+    </style>

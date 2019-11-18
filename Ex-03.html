@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Exercício 3</title>
+</head>
+<body>
+    <h1>Exercício 3</h1>
+    <p>
+        Digite o primeiro número: <br>
+        <input type="number" id="a">
+    </p>
+    <p>
+        Digite o segundo número: <br>
+        <input type="number" id="b">
+    </p>
+    <p>
+        Digite o terceiro número: <br>
+        <input type="number" id="c">
+    </p>
+    <p>
+            <input type="submit" onclick="calc()">
+        </p>
+        <p id="resposta"></p>
+</body>
+</html>
+<script>
+    function calc() {
+        var a = Number(document.all['a'].value);
+        var b = Number(document.all['b'].value);
+        var c = Number(document.all['c'].value);
+        var r = document.all['resposta'];
+        if (a > b && a > c) 
+        {
+            if(b>c)
+            r.innerHTML = "Ordenado em ordem crescente: " + a +" "+ b+" "+ c;
+            else
+            r.innerHTML = "Ordenado em ordem crescente: " + a +" "+ c+" "+ b;
+        }
+        else if (b>a && b>c){
+            if(a>c)
+            r.innerHTML = "Ordenado em ordem crescente: " + b +" "+ a+" "+ c;
+            else
+            r.innerHTML = "Ordenado em ordem crescente: " + b +" "+ c+" "+ a;
+        }
+        else if (c>a){
+            if(b>a)
+            r.innerHTML = "Ordenado em ordem crescente: " + c +" "+ b+" "+ a;
+            else
+            r.innerHTML = "Ordenado em ordem crescente: " + c +" "+ a+" "+ b;
+        }
+    }
+</script>
+<style>
+
+        #folha{
+            text-align:center;
+            background-color:white;
+            margin-left:20%;
+            margin-right:20%;
+            padding:10px;        
+        }
+    
+        body{
+            background-color:rgb(6, 83, 83);
+        }
+    
+    </style>

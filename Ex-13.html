@@ -1,0 +1,54 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Verificação</title>
+</head>
+<body onload="calcular()">
+    <a id="voltar" href="../index.html">Voltar</a>
+     <p id="resultado"></p>
+</body>
+</html>
+<script>
+
+function calcular() {
+    var p = document.getElementById("resultado")
+    var numeros = []
+
+    for (let i = 0; i <= 9; i++) {
+        numeros[i] = Number(window.prompt("Entre com um número"))
+    }
+
+    for (let i = 0; i <= 9; i++) {
+        if(numeros[i] != 0){
+            if(numeros[i] % 2 == 0){
+                numeros[i] = numeros[i] + 5
+            }else{
+                numeros[i] = numeros[i] * 5
+            }
+        }
+    }
+
+    p.innerHTML = "Vetor modificado: " + numeros.toString()
+}
+
+
+</script>
+<style>
+
+        #folha{
+            text-align:center;
+            background-color:white;
+            margin-left:20%;
+            margin-right:20%;
+            padding:10px;        
+        }
+    
+        body{
+            background-color:rgb(139, 58, 58);
+        }
+    
+    </style>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Exercício 4</title>
+</head>
+<body>
+    <h1>Exercício 4</h1>
+    <h2>Dados do primeiro usuário</h2>
+    <p>
+        Dia: 
+        <input type="number" id="a"> /
+        Mês: 
+        <input type="number" id="b"> /
+        Ano: 
+        <input type="number" id="c">
+    </p>
+    <h2>Dados do segundo usuário</h2>
+    <p>
+        Dia: <input type="number" id="a1"> /
+        Mês: <input type="number" id="b1"> /
+        Ano:<input type="number" id="c1">
+    </p>
+    <input type="submit" onclick="calc()">
+  <p id="resposta"></p>
+</body>
+</html>
+<script>
+    function calc() {
+        var a = Number(document.all['a'].value);
+        var b = Number(document.all['b'].value);
+        var c = Number(document.all['c'].value);
+        var a1 = Number(document.all['a1'].value);
+        var b1 = Number(document.all['b1'].value);
+        var c1 = Number(document.all['c1'].value);
+        if (c > c1) {
+            resposta.innerHTML = "Usuário 2 é mais velho";
+        }
+        else if (b > b1) {
+            resposta.innerHTML = "Usuário 2 é mais velho";
+        }
+        else if (a > a1) {
+            resposta.innerHTML = "Usuário 2 é mais velho";
+        }
+        else {
+           resposta.innerHTML = "Usuário 1 é mais velho"
+        }
+    }
+</script>
+<style>
+
+        #folha{
+            text-align:center;
+            background-color:white;
+            margin-left:20%;
+            margin-right:20%;
+            padding:10px;        
+        }
+    
+        body{
+            background-color:rgb(6, 83, 83);
+        }
+    
+    </style>

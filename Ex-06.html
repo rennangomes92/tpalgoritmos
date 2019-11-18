@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Exercício 1</title>
+</head>
+<body>
+    <h1>Exercício 1</h1>
+    <p>
+        Digite seu salário: <br>
+        <input type = "number" id = "sal">
+        <input type="submit" onclick="calc()">
+    </p>
+    <p id="resposta"></p>
+
+    
+</body>
+</html>
+<script>
+    function calc() {
+        var sal = Number(document.all['sal'].value);
+        var i = document.all['i'];
+        var resposta = document.all['resposta'];
+        for (i = 0 ; i <= 25 ; i++) {
+            if (sal <= 500) {
+            resposta.innerHTML = "O novo salario é: " + (sal+ (sal*0.05) +150);
+        }
+        else if (sal <= 600) {
+        resposta.innerHTML = "O novo salário é: " + (sal + (sal*0.05)+150);
+    }
+    else if (sal > 600 && sal <= 1200 && sal++) {
+    resposta.innerHTML = "O novo salário é: " + (sal + (sal*0.12)+100);
+    }
+    else {
+        resposta.innerHTML = "O novo salário é: " + sal;
+    }
+        }
+    }
+</script>
+<style>
+
+        #folha{
+            text-align:center;
+            background-color:white;
+            margin-left:20%;
+            margin-right:20%;
+            padding:10px;        
+        }
+    
+        body{
+            background-color:rgb(65, 133, 93);
+        }
+    
+    </style>

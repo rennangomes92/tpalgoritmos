@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Exercício 1 </title>
+</head>
+
+<body> 
+    
+    <h1>Exercício 01</h1>
+   
+    <p>
+        Digite a variável A: <br>
+        <input type="number" id="A">
+    </p>
+    <p>
+        Digite a variável B: <br>
+        <input type="number" id="B">
+    </p>
+    <p>
+        Digite a variável C: <br>
+        <input type="number" id="C">
+    </p>
+    <p>
+        <input type="submit" onclick="calc()">
+    </p>
+    <p id="resposta"></p>
+</body>
+
+
+<script>
+    function calc() {
+        var a = Number(document.all['A'].value);
+        var b = Number(document.all['B'].value);
+        var c = Number(document.all['C'].value);
+        var delta, x1, x2;
+        var resposta = document.all['resposta'];
+        delta = b * b - (4 * a * c);
+        alert("O valor de delta é: " + delta);
+        if (delta == 0) {
+            resposta.innerHTML = "As raízes da função são: " + delta;
+        }
+        else if (delta < 0) {
+            resposta.innerHTML = "A função não possui raízes reais";
+        }
+        else {
+         x1 = ((b*-1) + Math.sqrt(delta)) / (2 * a);
+         x2 = ((b*-1) - Math.sqrt(delta)) / (2 * a);
+         resposta.innerHTML = "As raízes são X¹ =" + x1 + " e X² = " + x2;
+        }
+    }
+</script>
+</html>
+<style>
+
+        #folha{
+            text-align:center;
+            background-color:white;
+            margin-left:20%;
+            margin-right:20%;
+            padding:10px;        
+        }
+    
+        body{
+            background-color:rgb(6, 83, 83);
+        }
+    
+    </style>

@@ -1,0 +1,52 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Fibonnaci</title>
+</head>
+<body>
+    <a id="voltar" href="../index.html">Voltar</a>
+    <h1>Sequência de Fibonacci</h1>
+    <p id="resultado"></p>
+    <input type="number" id = "qtd">
+    <input type="submit" onclick="calc()">
+</body>
+</html>
+<script>
+function calc() {
+    var p = document.getElementById("resultado")
+    var aux, prox
+    var atual = 1
+    var ant = 0
+    var qtd = Number(document.all['qtd'].value);
+
+    p.innerHTML += "1 "
+    for(let i = 0; i < qtd; i++){
+        prox = ant + atual
+        aux = ant
+        ant = atual 
+        atual = prox
+        
+        resultado.innerHTML += " " + prox 
+    }
+
+}
+</script>
+<style>
+
+        #folha{
+            text-align:center;
+            background-color:white;
+            margin-left:20%;
+            margin-right:20%;
+            padding:10px;        
+        }
+    
+        body{
+            background-color:rgb(65, 133, 93);
+        }
+    
+    </style>
