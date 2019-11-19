@@ -1,0 +1,56 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Maiores que 50</title>
+</head>
+
+<body onload="calcular()">
+    <a id="voltar" href="../index.html">Voltar</a>
+        <p id="resultado"></p>
+</body>
+
+</html>
+<script>
+  
+  function calcular() {
+    var p = document.getElementById("resultado")
+    var numeros = []
+    var flag = 0
+
+    for (let i = 0; i <= 7; i++) {
+        numeros[i] =Number(window.prompt("Entre com um número: "))
+    }
+    
+    for (let i = 0; i <= 7; i++) {
+        if(numeros[i] > 50){
+            p.innerHTML += numeros[i] + " na posição " + i + "<br>"
+            flag = 1
+        }
+    }
+
+    if(flag != 1){
+        p.innerHTML = "Não tem números maiores que 50"
+    }
+    
+}
+</script>
+<style>
+
+        #folha{
+            text-align:center;
+            background-color:white;
+            margin-left:20%;
+            margin-right:20%;
+            padding:10px;        
+        }
+    
+        body{
+            background-color:rgb(139, 58, 58);
+        }
+    
+    </style>

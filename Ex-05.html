@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Exercício 05</title>
+</head>
+
+<body>
+    <h1>Exercício 5</h1>
+    <p>
+        Escolha a opção: <br>
+        <br>
+        Digite 1 para somar dois números: <br>
+<br>
+        Digite 2 para obter a raíz quadrada de um número:<br>
+        <input type="number" id="escolha">
+
+    </p>
+    <p>
+        <input type="submit" onclick="calc()">
+    </p>
+    <p id="resposta"></p>
+    <p id="resposta2"></p>
+</body>
+
+</html>
+<script>
+    function calc() {
+        var escolha = Number(document.all['escolha'].value);
+        
+
+        if (escolha == 1){
+            resposta.innerHTML = "<p> Somar dois números: <br> <input type='number' id='a'> + <input type='number' id='b'><input type='submit' onclick='calc2()'></p>";
+        }
+        if(escolha == 2){
+        resposta.innerHTML = "<p>Raíz quadrada de um número: <br> <input type='number' id='rq'><input type='submit' onclick='calc3()'></p>";
+        }
+
+
+    }
+    function calc2(){
+        var a = Number(document.all['a'].value);
+        var b = Number(document.all['b'].value);
+        var r2 = document.all['resposta2'];
+        var r = a + b;
+        r2.innerHTML = "A soma de dois números é: " + r;
+    }
+    function calc3(){
+        var rq = Number(document.all['rq'].value);
+        var r2 = document.all['resposta2'];
+        var r1 = rq * rq;
+        r2.innerHTML = " O quadrado de um número é: " + r1;
+    }
+</script>
+
+<style>
+    #folha {
+        text-align: center;
+        background-color: white;
+        margin-left: 20%;
+        margin-right: 20%;
+        padding: 10px;
+    }
+
+    body {
+        background-color: rgb(6, 83, 83);
+    }
+</style>

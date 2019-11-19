@@ -1,0 +1,55 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Vetores</title>
+</head>
+
+<body onload="calcular()">
+    <a id="voltar" href="../index.html">Voltar</a>
+    
+    <p id="resultado"></p>
+</body>
+
+</html>
+<script>
+function calcular() {
+    var p = document.getElementById("resultado")
+    var numeros = [], numPositivo = [], numNegativo = []
+
+    for (let i = 0; i <= 7; i++) {
+        numeros[i] = Number(window.prompt("Entre com um número"))
+    }
+
+    for(let i = 0; i <= 7; i++){
+        if(numeros[i] > 0){
+            numPositivo.push(numeros[i])
+        }else if(numeros[i] < 0){
+            numNegativo.push(numeros[i])
+        }
+    }
+
+
+    p.innerHTML = "Números digitados: " +  numeros.toString() + "<br>Números negativos: " + numNegativo.toString() + "<br>Números positivos: " + numPositivo.toString()
+
+}
+</script>
+<style>
+
+        #folha{
+            text-align:center;
+            background-color:white;
+            margin-left:20%;
+            margin-right:20%;
+            padding:10px;        
+        }
+    
+        body{
+            background-color:rgb(139, 58, 58);
+        }
+    
+    </style>

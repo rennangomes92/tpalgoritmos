@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pr-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ordenar vetor</title>
+</head>
+<body onload="ordenarVetor()">
+    <a id="voltar" href="../index.html">Voltar</a>
+    <p id="resultado"></p>
+</body>
+</html>
+<script>
+function ordenarVetor() {
+    var p = document.getElementById("resultado")
+    var numeros = [], aux
+
+    for (let i = 0; i <= 19; i++) {
+        numeros[i] = Number(window.prompt("Entre com um número"))
+    }
+
+    for (let i = 0; i <= 19; i++) {
+        for (let j = 0; j <= 19 ; j++) {
+            if(numeros[i] < numeros[j]){
+                aux = numeros[i]
+                numeros[i] = numeros[j]
+                numeros[j] = aux
+            }
+        }
+    }
+
+
+    p.innerHTML = "Números em ordem: " + numeros.toString()
+}
+</script>
+<style>
+
+        #folha{
+            text-align:center;
+            background-color:white;
+            margin-left:20%;
+            margin-right:20%;
+            padding:10px;        
+        }
+    
+        body{
+            background-color:rgb(139, 58, 58);
+        }
+    
+    </style>

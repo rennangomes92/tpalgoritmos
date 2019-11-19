@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Exercício 2</title>
+</head>
+<body>
+    <h1>Exercício 2</h1>
+    <p>
+        Digite o Trabalho Prático: <br>
+        <input type="number" id="TP">
+    </p>
+    <p>
+        Digite a Avaliação Semestral: <br>
+        <input type="number" id="AS">
+    </p>
+    <p>
+        Digite o Exame Final: <br>
+        <input type="number" id="EF">
+    </p>
+    <p>
+            <input type="submit" onclick="calc()">
+        </p>
+        <p id="media"></p>
+</body>
+</html>
+<script>
+    function calc() {
+        var TP = Number(document.all['TP'].value);
+        var AS = Number(document.all['AS'].value);
+        var EF = Number(document.all['EF'].value);
+        var media = document.all['media'];
+        var mediaf = (TP * 0.2) + (AS * 0.3) + (EF * 0.5);
+
+        if (mediaf < 5 ) {
+            media.innerHTML= "A média é: " + mediaf + " e o conteito é: E";
+        }
+        else if (mediaf <6) {
+            media.innerHTML= "A média é: " + mediaf + " e o conceito é: D";
+        }
+        else if (mediaf < 7) {
+            media.innerHTML= "A média é: " + mediaf + " e o conceito é: C";
+        }
+        else if (mediaf < 8) {
+            media.innerHTML="A média é:" + mediaf + " e o conceito é: B";
+        }
+        else media.innerHTML= "A média é: " + mediaf + " e o conceito é: A";
+    }
+</script>
+<style>
+
+        #folha{
+            text-align:center;
+            background-color:white;
+            margin-left:20%;
+            margin-right:20%;
+            padding:10px;        
+        }
+    
+        body{
+            background-color:rgb(6, 83, 83);
+        }
+    
+    </style>
